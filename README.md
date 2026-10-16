@@ -6,6 +6,8 @@ This repository wraps the currently validated workflow without modifying the thr
 2. ViewCrafter runs on the exact same two source images and produces 25 interpolation frames.
 3. ViewGS trains from the MASt3R point cloud, two real images, and 23 interior diffusion frames.
 
+The priority is behavior-preserving code organization and reproducibility, not reconstruction-quality improvement. See [`docs/CODEBASE_MAP.md`](docs/CODEBASE_MAP.md) for the active dependency closure and cleanup boundary.
+
 Known technical discrepancies are recorded in [`docs/KNOWN_ISSUES.md`](docs/KNOWN_ISSUES.md). See [`docs/VALIDATION.md`](docs/VALIDATION.md) for the server smoke test and [`docs/CHECKPOINTS.md`](docs/CHECKPOINTS.md) for weight hashes.
 
 ## Server setup

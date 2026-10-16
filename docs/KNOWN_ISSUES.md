@@ -1,8 +1,8 @@
 # 已确认问题清单
 
 1. **环境分裂（已处理）**：原项目使用三个 Conda 环境；ViewCrafter 为 Python 3.9/PyTorch 1.13.1，InstantSplat 与 ViewGS 为 Python 3.10/PyTorch 2.1.2。现以 ViewCrafter 的兼容栈建立 `viewgs-unified`，并重新编译 ViewGS CUDA 扩展。
-2. **几何来源不完全统一**：InstantSplat 用 MASt3R 生成最终 `points3D.ply`；ViewCrafter 内部另跑 DUSt3R 生成插帧轨迹。ViewGS 使用前者点云，却没有读取后者的 `camera_params_full.txt`。
-3. **监督图与监督相机存在小偏差**：当前 ViewGS 根据 MASt3R 两端相机重新插值中间相机，而扩散图由 ViewCrafter/DUSt3R 轨迹生成。已测得旋转路径平均偏差约 0.14–0.57°、最大约 1.17°；归一化相机中心最大偏差可达 6.85%，焦距也有差异。
+2. **底层几何来源不同，但轨迹生成方式一致**：InstantSplat 用 MASt3R，ViewCrafter 内部用 DUSt3R；两边采用相同的轨迹插值方式。当前差异来自端点位姿、焦距和尺度估计，而不是轨迹生成算法不同。
+3. **监督图与监督相机存在小数值偏差**：ViewGS 从 MASt3R 两端相机插值得到监督相机，扩散图则由 DUSt3R 估计的两端相机按同一方式插值得到。已测得旋转路径平均偏差约 0.14–0.57°、最大约 1.17°；归一化相机中心最大偏差可达 6.85%，焦距也有差异。当前整理阶段保持该行为不变。
 4. **重复计算**：同一对图片先由 MASt3R 重建，又在 ViewCrafter 内由 DUSt3R 重建，增加时间和显存占用。后续应考虑让 ViewCrafter直接消费 MASt3R 点云与相机。
 5. **输入配对曾依赖人工目录**：容易让两阶段使用不同图片。新脚本从 InstantSplat 的 `images.txt` 自动提取同一对原图。
 6. **扩散端点未用于监督**：25 帧中两端被去除，实际使用中间 23 帧；这是当前设计，不是脚本漏帧。

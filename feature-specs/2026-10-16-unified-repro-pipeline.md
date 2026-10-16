@@ -4,6 +4,8 @@
 
 Use one environment and two stable entry points for the current two-view workflow: MASt3R geometry, ViewCrafter interpolation, and ViewGS reconstruction.
 
+The primary objective is behavior-preserving organization and reproducibility. Model replacement and quality improvement are explicitly out of scope.
+
 ## Acceptance criteria
 
 - One isolated Conda environment imports all three projects and their CUDA extensions.
@@ -12,6 +14,7 @@ Use one environment and two stable entry points for the current two-view workflo
 - Paths, GPU, view count, diffusion steps, and training iterations are configurable.
 - Existing dirty repositories are not modified or committed.
 - A real server smoke test reaches every stage and produces expected artifacts.
+- Cleanup preserves the current DUSt3R/MASt3R division and trajectory behavior.
 
 ## Architecture
 
