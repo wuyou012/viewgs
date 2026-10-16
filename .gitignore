@@ -1,0 +1,7 @@
+.env
+outputs/
+smoke/
+*.log
+__pycache__/
+.pytest_cache/
+

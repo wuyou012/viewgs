@@ -1,0 +1,15 @@
+name: viewgs-unified
+channels:
+  - pytorch3d
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9.16
+  - pytorch=1.13.1
+  - torchvision=0.14.1
+  - pytorch-cuda=11.7
+  - pytorch3d=0.7.5
+  - pip=23.0.1
+
