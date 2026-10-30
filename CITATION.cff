@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the associated paper."
+title: "SfM-free 3D Gaussian Splatting from extremely sparse view"
+type: software
+repository-code: "https://github.com/wuyou012/viewgs-repro"
+authors:
+  - family-names: He
+    given-names: Zongqi
+    orcid: "https://orcid.org/0009-0001-5146-6009"
+preferred-citation:
+  type: article
+  title: "SfM-free 3D Gaussian Splatting from extremely sparse view"
+  authors:
+    - family-names: He
+      given-names: Zongqi
+    - family-names: Li
+      given-names: Hanmin
+    - family-names: Chan
+      given-names: Kin-Chung
+    - family-names: Zuo
+      given-names: Yushen
+    - family-names: Xie
+      given-names: Hao
+    - family-names: Xiao
+      given-names: Zhe
+    - family-names: Xiao
+      given-names: Jun
+    - family-names: Bai
+      given-names: Xiaoyang
+    - family-names: Peng
+      given-names: Yifan
+    - family-names: Lam
+      given-names: Kin-Man
+  journal: "Computers & Graphics"
+  volume: 139
+  pages: "104684"
+  year: 2026
+  doi: "10.1016/j.cag.2026.104684"
