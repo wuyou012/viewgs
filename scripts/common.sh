@@ -12,9 +12,10 @@ fi
 CONDA_ROOT="${CONDA_ROOT:-/mnt/ssd2/zongqi/miniconda3}"
 ENV_NAME="${ENV_NAME:-viewgs-unified}"
 PYTHON_BIN="${PYTHON_BIN:-$CONDA_ROOT/envs/$ENV_NAME/bin/python}"
-INSTANTSPLAT_ROOT="${INSTANTSPLAT_ROOT:-/mnt/ssd2/zongqi/ViewGS/work1/InstantSplat}"
-VIEWCRAFTER_ROOT="${VIEWCRAFTER_ROOT:-/mnt/ssd2/zongqi/ViewGS/work1/ViewCrafter}"
-VIEWGS_ROOT="${VIEWGS_ROOT:-/mnt/ssd2/zongqi/ViewGS/work1/work5}"
+RUNTIME_ROOT="${RUNTIME_ROOT:-$REPO_ROOT/runtime}"
+INSTANTSPLAT_ROOT="${INSTANTSPLAT_ROOT:-$RUNTIME_ROOT/InstantSplat}"
+VIEWCRAFTER_ROOT="${VIEWCRAFTER_ROOT:-$RUNTIME_ROOT/ViewCrafter}"
+VIEWGS_ROOT="${VIEWGS_ROOT:-$RUNTIME_ROOT/ViewGS}"
 
 MAST3R_CKPT="${MAST3R_CKPT:-$INSTANTSPLAT_ROOT/mast3r/checkpoints/MASt3R_ViTLarge_BaseDecoder_512_catmlpdpt_metric.pth}"
 VIEWCRAFTER_CKPT="${VIEWCRAFTER_CKPT:-$VIEWCRAFTER_ROOT/checkpoints/model_sparse.ckpt}"
@@ -33,4 +34,3 @@ validate_runtime() {
   require_file "$VIEWCRAFTER_CKPT"
   require_file "$DUST3R_CKPT"
 }
-

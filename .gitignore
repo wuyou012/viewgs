@@ -4,4 +4,6 @@ smoke/
 *.log
 __pycache__/
 .pytest_cache/
-
+runtime/
+*.pyc
+*.bak*

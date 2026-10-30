@@ -14,10 +14,13 @@ Known technical discrepancies are recorded in [`docs/KNOWN_ISSUES.md`](docs/KNOW
 
 ```bash
 cp config.example.env .env
-bash scripts/bootstrap_env.sh
+# Edit only checkpoint paths and, if needed, CONDA_ROOT.
+bash scripts/setup.sh
 ```
 
-The tested server environment is `viewgs-unified`: Python 3.9.16, PyTorch 1.13.1, CUDA 11.7 runtime, PyTorch3D 0.7.5. CUDA extensions are compiled with the server CUDA 11.8 toolkit.
+`setup.sh` clones the three upstream projects at the exact revisions in `sources.lock.env`, applies only the active local overlays, creates the unified environment, compiles the ViewGS CUDA extensions, and validates all three entry points. Generated source checkouts live under the ignored `runtime/` directory.
+
+The tested server environment is `viewgs-unified`: Python 3.9.16, PyTorch 1.13.1, CUDA 11.7 runtime, PyTorch3D 0.7.5. CUDA extensions are compiled with the server CUDA 11.8 toolkit. A second clean installation under the temporary name `viewgs-repro-clean` also passed the full pipeline, so separate environments are not required on the validated server.
 The pipeline uses a scoped compatibility launcher because InstantSplat enables a PyTorch 2.x-only allocator option; the original source tree is not edited.
 It also stages one disposable holdout copy because the current ViewCrafter loader reserves the first sorted image as an LLFF test frame.
 
@@ -50,7 +53,7 @@ For a quick validation, use a new model path and `--iterations 5`. Full research
 ## External source versions tested
 
 - InstantSplat: `b951567`
-- ViewCrafter: `c2451dc` plus local experimental changes
-- ViewGS/FSGS: `a536a64` plus local experimental changes
+- ViewCrafter: `c2451dc` plus the tracked `overlays/viewcrafter` files
+- ViewGS/FSGS: `a536a64` plus the tracked `overlays/viewgs` files
 
-The local experimental source trees are intentionally not committed by this orchestration repository. They must be preserved separately until their active modifications are reduced into reviewable patches.
+The repository therefore does not depend on the original dirty working trees. Checkpoints and datasets remain external because of their size; their paths are configured in `.env`.

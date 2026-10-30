@@ -8,7 +8,7 @@ CONDA_BIN="$CONDA_ROOT/bin/conda"
 require_file "$CONDA_BIN"
 
 if [[ ! -x "$PYTHON_BIN" ]]; then
-  "$CONDA_BIN" env create -f "$REPO_ROOT/environment/environment.yml"
+  "$CONDA_BIN" env create -n "$ENV_NAME" -f "$REPO_ROOT/environment/environment.yml"
 fi
 
 "$PYTHON_BIN" -m pip install -r "$REPO_ROOT/environment/requirements-unified.txt"
@@ -27,4 +27,3 @@ export CUDA_HOME
 (cd "$VIEWCRAFTER_ROOT" && "$PYTHON_BIN" inference_diff.py --help >/dev/null)
 (cd "$VIEWGS_ROOT" && "$PYTHON_BIN" train_mip_diff_1.py --help >/dev/null)
 echo "Environment ready: $PYTHON_BIN"
-
