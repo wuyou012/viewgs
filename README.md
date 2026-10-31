@@ -9,7 +9,7 @@
   Hanmin&nbsp;Li&nbsp;·&nbsp;
   Kin-Chung&nbsp;Chan&nbsp;·&nbsp;
   <a href="https://yushenzuo.github.io/">Yushen&nbsp;Zuo</a>&nbsp;·&nbsp;
-  Hao&nbsp;Xie
+  Hao&nbsp;Xie·&nbsp;
   <!-- Author row 2 -->
   <a href="http://zachary-zhexiao.github.io/">Zhe&nbsp;Xiao</a>&nbsp;·&nbsp;
   <br>
