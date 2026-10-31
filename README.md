@@ -65,8 +65,8 @@ The validated server setup uses one Conda environment:
 - CUDA 11.8 toolkit for compiling the ViewGS extensions
 
 ```bash
-git clone https://github.com/wuyou012/viewgs-repro.git
-cd viewgs-repro
+git clone https://github.com/wuyou012/viewgs.git
+cd viewgs
 cp config.example.env .env
 # Set the three checkpoint paths in .env.
 bash scripts/setup.sh
