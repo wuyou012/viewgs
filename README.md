@@ -10,9 +10,9 @@
   Kin-Chung&nbsp;Chan&nbsp;·&nbsp;
   <a href="https://yushenzuo.github.io/">Yushen&nbsp;Zuo</a>&nbsp;·&nbsp;
   Hao&nbsp;Xie
-  <br>
   <!-- Author row 2 -->
   <a href="http://zachary-zhexiao.github.io/">Zhe&nbsp;Xiao</a>&nbsp;·&nbsp;
+  <br>
   <a href="https://junxiao01.github.io/">Jun&nbsp;Xiao</a>&nbsp;·&nbsp;
   Xiaoyang&nbsp;Bai&nbsp;·&nbsp;
   <a href="https://www.eee.hku.hk/~evanpeng/">Yifan&nbsp;Peng</a>&nbsp;·&nbsp;
