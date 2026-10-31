@@ -30,9 +30,9 @@
 
 <br>
 
-<p align="center">
+<!-- <p align="center">
   <img src="assets/tanks_temples_comparison.png" alt="Two-view Tanks and Temples comparison" width="82%">
-</p>
+</p> -->
 
 ## Overview
 
@@ -45,18 +45,6 @@ The implementation keeps the validated research behavior unchanged while replaci
 <p align="center">
   <img src="assets/pipeline.png" alt="SfM-free 3D Gaussian Splatting pipeline" width="100%">
 </p>
-
-The executable data flow is:
-
-1. **Dense stereo initialization (DSM)** — InstantSplat/MASt3R estimates the endpoint cameras and produces the dense point cloud used to initialize 3DGS.
-2. **Coherent view interpolation (CVI)** — ViewCrafter generates 25 camera-controlled frames from the same two selected images; the 23 interior frames become additional supervision.
-3. **Sparse-view Gaussian optimization** — ViewGS consumes the MASt3R geometry, the two real views, and the interpolated supervision. The training entry point enables the paper's multi-scale Laplacian and spatial-aware multi-scale geometry losses.
-
-| Paper component | Implementation | Main entry point |
-| --- | --- | --- |
-| Dense stereo module | InstantSplat + MASt3R | `scripts/run_pipeline.sh` |
-| Coherent view interpolation | ViewCrafter + DUSt3R trajectory estimation | `scripts/run_pipeline.sh` |
-| MLCR and ASMG optimization | ViewGS overlay and loss functions | `scripts/run_reconstruction.sh` |
 
 ## Abstract
 
@@ -156,14 +144,10 @@ viewgs-repro/
 
 This implementation builds on the following open-source projects:
 
-- [3D Gaussian Splatting](https://github.com/graphdeco-inria/gaussian-splatting)
 - [InstantSplat](https://github.com/NVlabs/InstantSplat)
 - [MASt3R](https://github.com/naver/mast3r)
 - [ViewCrafter](https://github.com/Drexubery/ViewCrafter)
-- [DUSt3R](https://github.com/naver/dust3r)
-- [FSGS/ViewGS](https://github.com/VITA-Group/FSGS)
-
-Please also follow the licenses and model terms of the upstream repositories and checkpoints.
+- 
 
 ## Citation
 
