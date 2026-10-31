@@ -147,7 +147,7 @@ This implementation builds on the following open-source projects:
 - [InstantSplat](https://github.com/NVlabs/InstantSplat)
 - [MASt3R](https://github.com/naver/mast3r)
 - [ViewCrafter](https://github.com/Drexubery/ViewCrafter)
-- 
+
 
 ## Citation
 
