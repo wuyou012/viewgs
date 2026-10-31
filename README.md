@@ -1,17 +1,22 @@
-<h1 align="center"><strong>SfM-free 3D Gaussian Splatting</strong></h1>
-<h2 align="center">from Extremely Sparse View</h2>
+<h1 align="center">
+  <strong>SfM-free 3D Gaussian Splatting</strong><br>
+  <sub>from Extremely Sparse View</sub>
+</h1>
 
 <p align="center">
-  <a href="https://wuyou012.github.io/">Zongqi He</a> ·
-  Hanmin Li ·
-  Kin-Chung Chan ·
-  <a href="https://yushenzuo.github.io/">Yushen Zuo</a> ·
-  Hao Xie ·
-  <a href="http://zachary-zhexiao.github.io/">Zhe Xiao</a> ·
-  <a href="https://junxiao01.github.io/">Jun Xiao</a> ·
-  Xiaoyang Bai ·
-  <a href="https://www.eee.hku.hk/~evanpeng/">Yifan Peng</a> ·
-  <a href="https://www.eie.polyu.edu.hk/~enkmlam/">Kin-Man Lam</a>
+  <!-- Author row 1 -->
+  <a href="https://wuyou012.github.io/">Zongqi&nbsp;He</a>&nbsp;·&nbsp;
+  Hanmin&nbsp;Li&nbsp;·&nbsp;
+  Kin-Chung&nbsp;Chan&nbsp;·&nbsp;
+  <a href="https://yushenzuo.github.io/">Yushen&nbsp;Zuo</a>&nbsp;·&nbsp;
+  Hao&nbsp;Xie
+  <br>
+  <!-- Author row 2 -->
+  <a href="http://zachary-zhexiao.github.io/">Zhe&nbsp;Xiao</a>&nbsp;·&nbsp;
+  <a href="https://junxiao01.github.io/">Jun&nbsp;Xiao</a>&nbsp;·&nbsp;
+  Xiaoyang&nbsp;Bai&nbsp;·&nbsp;
+  <a href="https://www.eee.hku.hk/~evanpeng/">Yifan&nbsp;Peng</a>&nbsp;·&nbsp;
+  <a href="https://www.eie.polyu.edu.hk/~enkmlam/">Kin-Man&nbsp;Lam</a>
 </p>
 
 <h3 align="center">Computers &amp; Graphics 2026</h3>
