@@ -13,7 +13,7 @@
   <!-- Author row 2 -->
   <a href="http://zachary-zhexiao.github.io/">Zhe&nbsp;Xiao</a>&nbsp;·&nbsp;
   <br>
-  <a href="https://junxiao01.github.io/">Jun&nbsp;Xiao</a>&nbsp;·&nbsp;
+  <a href="https://junxiao01.github.io/">Jun&nbsp;Xiao</a>&nbsp;
   Xiaoyang&nbsp;Bai&nbsp;·&nbsp;
   <a href="https://www.eee.hku.hk/~evanpeng/">Yifan&nbsp;Peng</a>&nbsp;·&nbsp;
   <a href="https://www.eie.polyu.edu.hk/~enkmlam/">Kin-Man&nbsp;Lam</a>
